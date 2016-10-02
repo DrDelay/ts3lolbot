@@ -1,4 +1,4 @@
 /ts3lolbot.exe
 /ts3lolbot
-config.json
-config.*.json
+/config.json
+/config.*.json
