@@ -5,5 +5,7 @@
   "QueryPass": "***",
   "VirtualServer": 1,
   "BotNickName": "LoLBot",
-  "BotDefaultChannel": 0
+  "BotDefaultChannel": 0,
+  "ApiKey": "*****",
+  "Region": "euw"
 }

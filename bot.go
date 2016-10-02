@@ -7,6 +7,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/TrevorSStone/goriot"
 	"github.com/jinzhu/configor"
 	"github.com/toqueteos/ts3"
 )
@@ -23,8 +24,8 @@ var Config = struct {
 	VirtualServer     uint   `default:"1"`
 	BotNickName       string `default:"LoLBot"`
 	BotDefaultChannel uint   `default:"0"`
-
-	Region string `required:"true"`
+	ApiKey            string `required:"true"`
+	Region            string `required:"true"`
 }{}
 
 func main() {
@@ -37,6 +38,8 @@ func main() {
 	}
 
 	defer conn.Close()
+
+	goriot.SetAPIKey(Config.ApiKey)
 
 	bot(conn)
 }
@@ -54,7 +57,7 @@ func bot(conn *ts3.Conn) {
 
 	conn.NotifyFunc(func(eventType string, data string) {
 		if eventType == "notifytextmessage" {
-			payload := parseTsDataString(data)
+			payload := *parseTsDataString(data)
 			message := ts3.Unquote(payload["msg"])
 			// targetmode invokerid
 			if strings.HasPrefix(message, "!") {
@@ -80,7 +83,7 @@ func aliveTick(conn *ts3.Conn) uint {
 		fmt.Printf("! keepalive err %d: %s\n", err.Id, err.Msg)
 		os.Exit(3)
 	}
-	payload := parseTsDataString(cmdResp)
+	payload := *parseTsDataString(cmdResp)
 	clientID, parseErr := strconv.ParseUint(payload["client_id"], 10, 0)
 	if parseErr != nil {
 		fmt.Printf("! keepalive client_id NaN: %s", parseErr.Error())
