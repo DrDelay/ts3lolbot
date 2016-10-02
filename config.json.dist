@@ -1,0 +1,9 @@
+{
+  "Host": "127.0.0.1:10011",
+  "Whitelisted": true,
+  "QueryUser": "***",
+  "QueryPass": "***",
+  "VirtualServer": 1,
+  "BotNickName": "LoLBot",
+  "BotDefaultChannel": 0
+}
