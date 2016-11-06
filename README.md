@@ -13,17 +13,13 @@ Put your settings in the *config.json*.
 $ cp config.json.dist config.json
 ```
 
-## Security
-
-If you discover any security related issues, please email info@vi0lation.de instead of using the issue tracker.
-
 ## Credits
 
 - [All Contributors][link-contributors]
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). Please see the [License File](LICENSE.md) for more information.
 
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-githubversion]: https://poser.pugx.org/drdelay/ts3lolbot/v/stable
