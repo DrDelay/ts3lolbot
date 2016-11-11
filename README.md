@@ -22,7 +22,7 @@ $ cp config.json.dist config.json
 The MIT License (MIT). Please see the [License File](LICENSE.md) for more information.
 
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-githubversion]: https://poser.pugx.org/drdelay/ts3lolbot/v/stable
+[ico-githubversion]: https://poser.pugx.org/kronthto/ts3lolbot/v/stable
 
-[link-releases]: https://github.com/DrDelay/ts3lolbot/releases
+[link-releases]: https://github.com/kronthto/ts3lolbot/releases
 [link-contributors]: ../../contributors
